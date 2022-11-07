@@ -34,3 +34,8 @@ def firstUniqChar(string :str)->int:
         if hashmap[string[index]]==1:
             return index 
     return -1
+
+
+if __name__=="__main__":
+    s="vsdevelopers"
+    print(firstUniqChar(s))
