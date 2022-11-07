@@ -32,6 +32,6 @@ vector<string> fizzbuzz(int n){
 int main(){
     vector<string> ans=fizzbuzz(15);
     for(auto& a:ans){
-        cout<<a;
+        cout<<a<<" ";
     }
 }

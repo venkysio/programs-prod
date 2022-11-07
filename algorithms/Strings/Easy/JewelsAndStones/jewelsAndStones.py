@@ -1,7 +1,6 @@
 # Count Number of Jewels in Stones
 
-testcases=[["aA","aAAbbbb"],["z","ZZ"],["abc","ABccds"],["VSd","vSD"]]
-output=[3,0,2,1]
+
 
 def solution(testcases):
     answers=list()
@@ -27,4 +26,6 @@ def count_jewels(jewel,stones):
     return count
 
 if __name__=="__main__":
+    testcases=[["aA","aAAbbbb"],["z","ZZ"],["abc","ABccds"],["VSd","vSD"]]
+    output=[3,0,2,1]
     solution(testcases)
