@@ -39,7 +39,7 @@ public class VSDArrayHeapSort {
     }
     static void VSDMaxheapsort(int[] arr){
         int n=arr.length;
-        for(int i=(int)n/2-1;i>0;i--){
+        for(int i=(n/2)-1;i>=0;i--){
             VSDmaxheapify(arr, n, i);
         }
         for(int i=n-1;i>0;i--){
@@ -49,7 +49,7 @@ public class VSDArrayHeapSort {
     }
     static void VSDMinheapsort(int[] arr){
         int n=arr.length;
-        for(int i=(int)n/2-1;i>0;i--){
+        for(int i=(n/2)-1;i>=0;i--){
             VSDminheapify(arr, n, i);
         }
         for(int i=n-1;i>0;i--){

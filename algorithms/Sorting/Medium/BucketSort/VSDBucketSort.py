@@ -12,6 +12,7 @@ def VSDBucketSort(arr,n):
         temp.sort()
         for k in range(len(temp)):
             arr[i]=temp[k]
+            i+=1
     
     print(*arr,sep=" ")
 
