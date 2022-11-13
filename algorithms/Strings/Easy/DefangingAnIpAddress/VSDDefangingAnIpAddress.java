@@ -15,7 +15,7 @@
 
 // The given address is a valid IPv4 address.
 
-class Solution {
+class VSDDefangingAnIpAddress{
 
     String defangIPaddr(String s) {
         String answer = "";
