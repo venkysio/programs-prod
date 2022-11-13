@@ -25,7 +25,7 @@ void countingSort(int max,int n,int arr[]){
 
 }
 int VSDmax(int arr[],int n){
-    int maxele=0;
+    int maxele=arr[0];
     for(int i=0;i<n;i++){
         if(arr[i]>maxele){
             maxele=arr[i];

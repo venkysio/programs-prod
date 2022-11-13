@@ -3,7 +3,7 @@
 public class VSDCountingSort{
 
     static int VSDmax(int[] arr){
-        int maxele=0;
+        int maxele=arr[0];
         for(int a:arr){
             if (a>maxele){
                 maxele=a;
