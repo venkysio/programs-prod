@@ -14,11 +14,11 @@ public class VSDShellSort {
 					int key=arr[i];
 					int j=i-shellsize;
 					for(;j>=0;j-=shellsize){
-					if(arr[j]>key){
-						arr[j+shellsize]=arr[j];
+						if(arr[j]>key){
+							arr[j+shellsize]=arr[j];
 						}
-					else{
-						break;
+						else{
+							break;
 						}
 					}
 					arr[j+shellsize]=key;
