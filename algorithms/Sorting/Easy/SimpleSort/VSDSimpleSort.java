@@ -32,6 +32,7 @@ public class VSDSimpleSort {
 		for(int i=0;i<n;i++) {
 			a[i]=sc.nextInt();
 		}
+		sc.close();
 	}
 	//Function to print output
 	public static void VSDprintOutput() {
