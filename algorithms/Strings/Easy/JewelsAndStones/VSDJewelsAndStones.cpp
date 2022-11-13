@@ -1,49 +1,44 @@
-#include <iostream>
-#include <string>
 #include <bits/stdc++.h>
-
 using namespace std;
 
-int count_jewels(string jewels, string stones)
+int VSD_Jewels_In_Stones(string jewels,string stones)
 {
-    map<char, int> hash;
-    int count = 0;
-    for (char &a : jewels)
-    {
-        hash[a] = 0;
-    
-    }
-    for (char &a : stones)
-    {
-        if (hash.find(a) != hash.end())
-        {
-            count++;
+    unordered_map<char,int> VSD;
+    int VSD_count=0;
+    for(int ptr=0;ptr<jewels.length();ptr++){
+        if(VSD.find(jewels[ptr])==VSD.end()){
+            VSD[jewels[ptr]]=0;
         }
     }
-    return count;
-}
-
-void solution(vector<pair<string,string>> testcases)
-{
-    vector<int> answers;
-
-    for (int i = 0; i < testcases.size(); i++)
-    {
-        string jewels=testcases[i].first;
-        string stones=testcases[i].second;
     
-       int x=count_jewels(jewels,stones);
-       answers.push_back(x);
-    } 
-    for(int& a:answers){
-        cout<<a<<" ";
+    for(int ptr=0;ptr<stones.length();ptr++){
+        if(VSD.find(stones[ptr])!=VSD.end()){
+            VSD[stones[ptr]]+=1;
+        }
     }
+    
+    for(int ptr=0;ptr<jewels.length();ptr++){
+            VSD_count+=VSD[jewels[ptr]];
+        }
+    return VSD_count;
 }
 
 
-int main()
-{
-    vector<pair<string, string>> testcases = {{"aA", "aAAbbbb"}, {"z", "ZZ"}, {"abc", "ABccds"}, {"VSd", "vSD"}};
-    solution(testcases);
+
+int main() {
+    int VSD_test_count;
+    cout<<"enter no of test case count ";
+    cin>>VSD_test_count;
+    while(VSD_test_count)
+    {
+    cout<<"enter jewels string   ";
+    string jewels;
+    cin>>jewels;
+    cout<<"enter stones string   ";
+    string stones;
+    cin>>stones;
+    cout<<"jewels in stones count is: "  <<VSD_Jewels_In_Stones(jewels,stones)<<endl;
+    VSD_test_count--;
+    }
     return 0;
 }
