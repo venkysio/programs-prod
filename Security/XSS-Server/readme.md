@@ -12,9 +12,9 @@ XSS-non persistent(TYPE1)
 - This attack mainly occurs when the user clicks on the link containg malicious script. 
 - These links appear like they are from the valid website but they also contaion some scripts that are executed without user's knowledge, stealing the data.
 
-- For example consider a search website that echoes the users search. This website asks for user login and stores user cookies in their browser.
-- When the user gets to see some link related to this website, he might click on that thinking that it will be giving him some serch results.
-- But the malicious url while leading to search website steals the user cookies containg login info stored in the browser nd then can access them.
+- For example, Consider a search website that echoes the users search. This website asks for user login and stores user cookies in their browser.
+        - When the user gets to see some link related to this website, he might click on that thinking that it will be giving him some serch results.
+        - But the malicious url while leading to search website steals the user cookies containg login info stored in the browser nd then can access them.
 
 Usage:
 
@@ -28,5 +28,7 @@ STEP 3: The user can now use the search website, search for anything and results
 
 Attack:
 STEP 1: When the user clicks on the malicious url(within view more button) the malicious website(XSS-Exploit) stoles cookies and stores them in its database.
+
 STEP 2: The malicious user now gets the cookie which has user name and password of an authenticated user.
+
 STEP 3: Malicious user can now insert the stolen cookie in their browser and login as if they were the authenticated user.
