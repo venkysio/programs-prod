@@ -18,4 +18,4 @@ SQL INJECTION
 
 - Using prepared statements instead of string concatenation
 
-- Encypting user data in database so that even the SQL Injection occurs the attacker cannot decrypt the entire data.
+- Encypting user data in database so that even if the SQL Injection occurs, the attacker cannot decrypt the entire data.
