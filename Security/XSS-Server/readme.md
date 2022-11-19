@@ -27,6 +27,7 @@ STEP 2: If the cookie for user login exists in browser, it doesnot ask for user 
 STEP 3: The user can now use the search website, search for anything and results are displayed.(echoed)
 
 Attack:
+
 STEP 1: When the user clicks on the malicious url(within view more button) the malicious website(XSS-Exploit) stoles cookies and stores them in its database.
 
 STEP 2: The malicious user now gets the cookie which has user name and password of an authenticated user.
