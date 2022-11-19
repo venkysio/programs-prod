@@ -1,5 +1,5 @@
 SQL INJECTION
-    Attack:
+-- Attack:
 
 - This attack is mainly found in web pages that take user input to query the data from database.
 
@@ -10,7 +10,7 @@ SQL INJECTION
 - In general statements like 1or2>1 and 2>1-- can be used to retrive all the records from the database as these statements are true everytime and comments are used to remove any extra data.
 
 - For example it may form a query to databse: select * from database where 1 or 2>1 resulting all the records.
-    Remedies:
+-- Remedies:
 
 - Using user input validation
 
