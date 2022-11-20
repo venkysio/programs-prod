@@ -62,3 +62,9 @@ STEP 2: The malicious user now gets the cookie which has user name and password 
 
 STEP 3: Malicious user can now insert the stolen cookie in their browser and login as if they were the authenticated user.
 
+Remedies:
+
+-Validate user input
+
+- Encrypt cookies and data
+
