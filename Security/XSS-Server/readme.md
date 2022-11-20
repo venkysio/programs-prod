@@ -64,7 +64,7 @@ STEP 3: Malicious user can now insert the stolen cookie in their browser and log
 
 Remedies:
 
--Validate user input
+- Validate user input
 
 - Encrypt cookies and data
 
