@@ -5,4 +5,4 @@ XSS-Exploit: Malicius user's website which conatins database of stolen cookies
 
 XSS-cookies: website with XSS vulnerability
 
-XssNonpersistentCorrectionCode :website without vulnerability
+XSSNonpersistentCorrectionCode :website without vulnerability
