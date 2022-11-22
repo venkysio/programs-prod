@@ -82,6 +82,8 @@ public class VSDMaxHeapSort {
 		}
 			return current;
 		}
+
+	
 	//Function to return the expected node count for given height
 	public static int VSDexpectedCount(int h) {
 		int count=0;
@@ -171,6 +173,7 @@ public static Node VSDdeleteNode(Node root,int height,int size) {
 public static void main(String args[]) {
 	int[] arr=new int[]{10,11,13,6,25,17,12,5,4};
 	Node n;
+	root=null;
 	for(int i=0;i<arr.length;i++) {
 		n=new Node(arr[i]);
 		root=VSDbuildHeap(root,n);
@@ -188,7 +191,6 @@ public static void main(String args[]) {
 		size--;
 	}
 	System.out.println(root.data);
-	root=null;
 	
 }
 }

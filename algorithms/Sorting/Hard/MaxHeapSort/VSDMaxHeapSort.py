@@ -1,72 +1,82 @@
-#Copyrights to vsdevelopers.io
-#For more programs visit vsdevelopers.io 
-#Python program for Heap sort using max Heap
+
+class Node:
+    def __init__(self,data):
+        self.data=data 
+        self.left,self.right=data 
+
+def findheight(root):
+    if not root:
+        return -1 
+    left=findheight(root.left)
+    right=findheight(root.right)
+    if left<right:
+        return left+1 
+    return right+1 
 
 
-# Function to maintain max heap properties
-def VSDmaxHeapify(arr,size,i):
-    #declare current element index is largest element
-    large=i 
+def countnode(root):
+    left=right=0
+    if not root.left:
+        left=countnode(root.left)
+    if not root.right:
+        right=countnode(root.right)
+    count=right+left+1 
+    return count 
 
-    #find index of left child
-    leftchild=(2*i)+1 
+def VSDexpectedCount(height):
+    count=0
+    while(height>=0):
+        count+=2**height 
+        height-=1 
+    return count 
 
-    #find index of right child
-    rightchild=(2*i)+2 
+def VSDbuildHeap(root,data):
 
-    # check largest element between left child and current element
-    if leftchild<size and arr[i]<arr[leftchild]:
-        large=leftchild
+    if not root:
+        return Node(data)
+
+    elif root.left is not None and root.right is not None:
+        leftcount=countnode(root.left)
+        rightcount=countnode(root.right)
+        height=findheight(root)
+        if leftcount < VSDexpectedCount(height)//2:
+            VSDbuildHeap(root.left,data)
+        elif leftcount==rightcount:
+            VSDbuildHeap(root.right,data)
+        else:
+            VSDbuildHeap(root.right,data)
+
+    elif root.left is None:
+        root.left = Node(data)
+
+    elif root.root.right is None:
+        root.right=Node(data)
+
+    return root 
+
+def VSDheapify(root):
     
-    # check largest element between right child and large element
-    if rightchild<size and arr[large]<arr[rightchild]:
-        large=rightchild
+    if not root.left:
+        root.left=VSDheapify(root.left)
+    if not root.right:
+        root.right=VSDheapify(root.right)
     
-    # if large element is not current element 
-    # swap current element with large element 
-    # heapify the the current array
-    if large!=i:
-        arr[large],arr[i]=arr[i],arr[large]
-        VSDmaxHeapify(arr,size,large)
+    if root.left and root.left.data>root.data:
+        root.left.data,root.data=root.data,root.left.data 
+    
+    if root.right and root.right.data>root.data:
+        root.right.data,root.data=root.data,root.right.data 
+    
+    return root 
 
+def VSDchooseNode(root,level,size):
+    if not root:
+        return 
+    if level==0:
+        deletecount+=1 
+        if deletecount==size//2:
+            parent=root 
+        if deletecount==size:
+            deletenode=root 
+            return 
 
-# Function to maintain max heap properties
-
-
-
-
-
-# Function to sort the given array using maxheap in ascending order
-def VSDMaxheapsort(array):
-    size=len(array)
-
-    # Heapify the given array into maxheap
-    for i in range((size//2)-1,-1,-1):
-        VSDmaxHeapify(array,size,i)
-
-    # Find the max element in array
-    # Swap the max element with last index element 
-    # Decrease the last index by 1
-    # Heapify the current array upto last index
-    for i in range(size-1,0,-1):
-        array[i],array[0]=array[0],array[i]
-        VSDmaxHeapify(array,i,0)
-  
-
-
-
-
-
-#Fucntion to print array
-def printarray(array):
-
-    for i in array:
-        print(i,end=" ")
-    print()
-
-
-if __name__=="__main__":
-    arr=[5,2, 9, 12, 54, 31, 65, 31, 45, 65]
-    print("Sorted array using maxheapsort:")
-    VSDMaxheapsort(arr)
-    printarray(arr)    
