@@ -1,4 +1,4 @@
-linked list program with CRUD operations
+#linked list program with CRUD operations
 class Node:
     
     def __init__(self,val):
@@ -52,7 +52,7 @@ class SLL:
 
     def delete_end(self):
         if self.head is None:
-            delete_begin()
+            self.delete_begin()
         elif self.head.next is None:
             self.head=None
         temp=self.head
