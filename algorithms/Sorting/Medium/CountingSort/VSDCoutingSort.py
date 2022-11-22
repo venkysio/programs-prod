@@ -21,7 +21,7 @@ def VSDCountingSort(max:int,n,a):
     for i in range(1,len(count)):        
         count[i]+=count[i-1]
        
-    for i in range(n):       
+    for i in reversed(range(n)) :      
         output[count[a[i]]-1]=a[i]
         count[a[i]]-=1 
     

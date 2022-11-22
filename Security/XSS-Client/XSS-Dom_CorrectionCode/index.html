@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+       <p>Welcome to our website.Very glad to see you.To make your experience better help us synchronise your data from other websites.</p>
+	   <button type="button" onclick="urlscript()">Synchronise data</button>
+	   <p id="trail"></p>
+
+</body>
+<script type="text/javascript">
+    function urlscript(){
+		let re=new XMLHttpRequest();
+		re.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	   document.getElementById("trail").innerText=re.response;
+	   
+    }
+};
+re.open("GET", "http://localhost:8081/SinfulwebsiteforXSSDom/", true);
+re.send();
+    }
+</script>
+</html>

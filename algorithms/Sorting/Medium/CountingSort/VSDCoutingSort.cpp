@@ -18,10 +18,12 @@ void countingSort(int max,int n,int arr[]){
     for(int i=0;i<n;i++){
         output[count[arr[i]]-1]=arr[i];
     }
-    for(int i=0;i<n;i++){
-        cout<<output[i]<<" ";
+    for(int i=n-1;i>0;i--){
+        output[count[a[i]]-1]=a[i];
+        count[a[i]]--;
+
     }
-    cout<<endl;
+    
 
 }
 int VSDmax(int arr[],int n){
@@ -38,5 +40,7 @@ int main(){
     int arr[]={2,24,12,96, 456, 899,34};
     int max=VSDmax(arr,n);
     countingSort(max,n,arr);
+    for(int i=0;i<n;i++)
+                cout<<output[i];
     return 0;
 }
