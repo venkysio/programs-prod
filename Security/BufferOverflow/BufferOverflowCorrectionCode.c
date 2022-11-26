@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<string.h>
-void DontDoThis(char* input)
+void DoThis(char* input)
 {
 char buf[1];
 int i;
@@ -17,6 +17,6 @@ int main()
     fgets(string,3,fp);
     printf("The string is: %s",string);
     fclose(fp);
-	DontDoThis(string);
+	DoThis(string);
     return 0;
 }
