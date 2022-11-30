@@ -5,10 +5,13 @@ class Node:
         self.data=data 
         self.left=self.right=None 
 
-def heightBST(root):
-    if not root:
-        return 0
-    return max(heightBST(root.left)+1,heightBST(root.right)+1)
+
+def VSDpreorder(root):
+    if root:
+        print(root.data)
+        VSDpreorder(root.left)
+        VSDpreorder(root.right)
+
 
 if __name__=="__main__":
     root=Node(10)
@@ -19,4 +22,4 @@ if __name__=="__main__":
     root.right.left=Node(60)
     root.right.right=Node(70)
 
-    print(heightBST(root))
+    VSDpreorder(root)
