@@ -30,8 +30,8 @@ client authenticating the server, the server authenticating the client, or both.
 
 REDEMPTION STEPS:
 
--Use SSL, ssh, or the Kerberos-based Application Programming Interfaces (APIs) Windows provides in the Distributed
+-   Use SSL, ssh, or the Kerberos-based Application Programming Interfaces (APIs) Windows provides in the Distributed
 Component Object Model/Remote Procedure Calls (DCOM/RPC) libraries.
 
--If your application involves bulk data transfer, and privacy is not required, consider just transmitting a hash or HMAC of the data through a secure
+-   If your application involves bulk data transfer, and privacy is not required, consider just transmitting a hash or HMAC of the data through a secure
 channel, and then check for corruption or tampering on the receiving end.
