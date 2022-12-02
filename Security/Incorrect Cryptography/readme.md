@@ -11,3 +11,15 @@ There are common mistakes that developers do when they use cryptography. Some of
     - Two-key 3DES is losing its FIPS evaluation status in 2010. Do not use it.
   Knowing such properties is very crucial before implementing the technique.
 - 
+REDEMPTION STEPS:
+
+- Replace weaker algorithms with secure versions
+
+- Don’t use stream ciphers. You should grep your code for all instances of “RC4”
+and any other stream ciphers you might use.
+
+- Any time you create a password verifier, use at least 8 bytes of salt, preferably 16—and if
+you’re using one of the larger hashing algorithms (SHA256 or SHA512), consider using
+more salt
+
+
