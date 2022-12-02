@@ -26,9 +26,19 @@ numbers. The only real difference is that if the attacker doesn’t know the see
 Another point to note about cryptographic generators is that the strength of their
 outputs can never be better than the strength of the underlying key.
 
-- “True” random number generators (TRNGs)
+- "True" random number generators (TRNGs)
 As a result, true random numbers on the typical machine are in short supply relative
 to the demand for them, especially on server hardware that has nobody sitting in front of
 the console using the keyboard and mouse. While it’s possible to solve the problem with
 hardware, it’s usually not cost effective. Therefore, it usually pays to be sparse with true
 random numbers, and use them instead to seed CRNGs.
+
+REDEMPTION STEPS:
+In Windows systems:
+
+- The Windows CryptoAPI provides the routine CryptGenRandom() or BCryptGenRandom on Windows Vista when using CNG, which can be implemented by any cryptographic provider.
+
+In Unix systems:
+
+-Random numbers are served up by two special devices (generally, /dev/random and /dev/urandom, but OpenBSD is an exception, providing /dev/srandom and
+/dev/urandom).
