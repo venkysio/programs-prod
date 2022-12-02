@@ -27,9 +27,9 @@ right.
 REDEMPTION STEPS
 
 - The certificate chains to a valid root CA.
-- 
+ 
 - The certificate is within its validity period.
-- 
+ 
 - The hostname is compared against the proper subfield in at least one of the
 DN field or the X.509 v3 subjectAltName extension.
 
