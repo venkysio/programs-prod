@@ -40,5 +40,5 @@ In Windows systems:
 
 In Unix systems:
 
--Random numbers are served up by two special devices (generally, /dev/random and /dev/urandom, but OpenBSD is an exception, providing /dev/srandom and
+- Random numbers are served up by two special devices (generally, /dev/random and /dev/urandom, but OpenBSD is an exception, providing /dev/srandom and
 /dev/urandom).
