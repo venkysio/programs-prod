@@ -21,3 +21,10 @@ User input validation can prevent String formatting errors
 a) True
 b) False
 Answer: a
+
+Which of the following can be some extra defensive measures against attacks occured through String formatting ?
+a) Use fixed format strings, or format strings from a trusted source.
+b) Check and limit local requests to valid values.
+c) Consider using higher-level languages that tend to be less vulnerable to this issue.
+d) All of the above
+Answer: d
