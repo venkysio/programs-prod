@@ -10,7 +10,7 @@ There are common mistakes that developers do when they use cryptography. Some of
     - The key used for DES encryption is too small; it’s only 56 bits long.
     - Two-key 3DES is losing its FIPS evaluation status in 2010. Do not use it.
   Knowing such properties is very crucial before implementing the technique.
-- 
+  
 REDEMPTION STEPS:
 
 - Replace weaker algorithms with secure versions
