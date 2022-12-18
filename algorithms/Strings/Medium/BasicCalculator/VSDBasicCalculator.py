@@ -61,6 +61,4 @@ def calculator(s):
     return ans 
 
 
-if __name__=="__main__":
-    s= " 3+5 / 2 "
-    print(calculator(s))
+
