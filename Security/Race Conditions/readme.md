@@ -1,5 +1,4 @@
-The definition of a race condition is when two different execution contexts, whether they are threads or processes, are able to change a resource and interfere with one an-
-other.
+The definition of a race condition is when two different execution contexts, whether they are threads or processes, are able to change a resource and interfere with one another.
 
 Race conditions happen more reliably on multiprocessor systems, and
 given the reality of current processors, systems that either have or will behave as if two processors are present 
