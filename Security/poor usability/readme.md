@@ -24,6 +24,7 @@ The properties of security related text can be:
   - Too many messages
   - Inaccurate or generic information
   - Errors with only error codes
+  
 Redemption steps:
 - When Users Are Involved, Make the UI Simple and Clear
 - Make Security Decisions for Users
