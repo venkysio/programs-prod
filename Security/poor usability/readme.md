@@ -24,3 +24,9 @@ The properties of security related text can be:
   - Too many messages
   - Inaccurate or generic information
   - Errors with only error codes
+Redemption steps:
+- When Users Are Involved, Make the UI Simple and Clear
+- Make Security Decisions for Users
+- Move Over Stick; Bring On the Carrot
+- Make Selective Relaxation of Security Policy Easy
+- Clearly Indicate Consequences
