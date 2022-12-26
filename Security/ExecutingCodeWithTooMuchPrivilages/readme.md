@@ -5,10 +5,7 @@ Every program and every user of the system should operate using the least set
 of privileges necessary to complete the job.
 
 If there are ways to further reduce the
-capabilities of the user account but still get the job done, then you should reduce the capa-
-bilities of the process. A closely related problem is designing the application so that
-privileges are used for the shortest possible time.
-
+capabilities of the user account but still get the job done, then you should reduce the capabilities of the process.
 For example, in Windows a privilege is a discrete machine-wide capability,
 such as the ability to debug any arbitrary process or bypass an ACL check for backup or
 restore purposes.
