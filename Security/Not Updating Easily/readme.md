@@ -19,8 +19,7 @@ Redemption Steps:
 - Resist the urge to bundle additional software in a patch.
 - If you need to update a component running as a highly privileged user, you can let an
 ordinary user download the update.Get the user to put the update in a safe place, and then have the privileged
-process that needs to be updated check that the patch has not been tampered with by veri-
-fying the signature, and install it itself.
+process that needs to be updated check that the patch has not been tampered with by verifying the signature, and install it itself.
 - Make the application just do the right thing without relying on the user to make a correct
 decision.
 - Don’t update without notifying the user.
