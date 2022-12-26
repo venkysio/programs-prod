@@ -6,6 +6,8 @@ of privileges necessary to complete the job.
 
 If there are ways to further reduce the
 capabilities of the user account but still get the job done, then you should reduce the capabilities of the process.
+
+A privilege has different meanings on different operating systems and operating environments.
 For example, in Windows a privilege is a discrete machine-wide capability,
 such as the ability to debug any arbitrary process or bypass an ACL check for backup or
 restore purposes.
