@@ -24,5 +24,4 @@ fying the signature, and install it itself.
 - Make the application just do the right thing without relying on the user to make a correct
 decision.
 - Don’t update without notifying the user.
-- 
 
