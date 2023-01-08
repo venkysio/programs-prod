@@ -17,7 +17,7 @@
 
 class VSDDefangingAnIpAddress{
 
-    String defangIPaddr(String s) {
+    static String defangIPaddr(String s) {
         String answer = "";
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '.') {
@@ -29,13 +29,11 @@ class VSDDefangingAnIpAddress{
         }
         return answer;
     }
-}
-
-public class defangingIP {
-    public static void main(String[] args) {
-        Solution obj = new Solution();
+    public static void main(String args[]){
         String address = "1.1.1.1";
-        String s = obj.defangIPaddr(address);
+        String s = defangIPaddr(address);
         System.out.println(s);
     }
 }
+
+

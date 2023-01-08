@@ -28,3 +28,7 @@ def reverseString(arr:list[str])->None:
         j-=1
     print(arr)
     return arr
+
+if "__name__"=="__main__":
+    input=["h","e","l","l","o"]
+    print(reverseString(input))

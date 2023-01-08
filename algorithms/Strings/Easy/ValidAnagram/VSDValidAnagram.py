@@ -42,3 +42,7 @@ def isAnagram(string1,string2):
         if value!=0:
             return False
     return True
+
+s = "anagram"
+t = "nagaram"
+print(isAnagram(s,t))

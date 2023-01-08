@@ -24,4 +24,6 @@ def shuffle_string(string : str,indices : list ) -> str :
     return ("").join(answer)
 
 if __name__=="__main__":
-    solution(testcases)
+    string="vsdevelopers"
+    indices=[1,11,10,9,8,7,6,5,4,3,2,0]
+    print(shuffle_string(string,indices))

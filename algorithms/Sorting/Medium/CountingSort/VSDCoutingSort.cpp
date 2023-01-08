@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void countingSort(int max,int n,int arr[]){
+void countingSort(int max,int n,int arr[],int output[]){
     int count[max+1];
     for(int i=0;i<=max;i++){
         count[i]=0;
     }
-    int output[n];
+    // int output[n];
     for(int j=0;j<n;j++){
         count[arr[j]]+=1;
     }
@@ -19,8 +19,8 @@ void countingSort(int max,int n,int arr[]){
         output[count[arr[i]]-1]=arr[i];
     }
     for(int i=n-1;i>0;i--){
-        output[count[a[i]]-1]=a[i];
-        count[a[i]]--;
+        output[count[arr[i]]-1]=arr[i];
+        count[arr[i]]--;
 
     }
     
@@ -39,7 +39,8 @@ int main(){
     int n=7;
     int arr[]={2,24,12,96, 456, 899,34};
     int max=VSDmax(arr,n);
-    countingSort(max,n,arr);
+    int output[n];
+    countingSort(max,n,arr,output);
     for(int i=0;i<n;i++)
                 cout<<output[i];
     return 0;

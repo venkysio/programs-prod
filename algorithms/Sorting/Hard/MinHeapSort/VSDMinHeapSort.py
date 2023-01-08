@@ -65,9 +65,6 @@ def printarray(array):
 
 if __name__=="__main__":
     arr=[5,2, 9, 12, 54, 31, 65, 31, 45, 65]
-    print("Sorted array using maxheapsort:")
-    VSDMaxheapsort(arr)
-    printarray(arr)
     print("Sorted array using minheapsort:")
     VSDMinheapsort(arr)
     printarray(arr)    

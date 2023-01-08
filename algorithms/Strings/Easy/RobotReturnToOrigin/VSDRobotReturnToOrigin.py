@@ -37,3 +37,8 @@ def judgeCircle(moves: str) -> bool:
         else:
             x_coord+=1
     return x_coord==0 and y_coord==0
+
+
+if "__name__"=="__main__":
+    moves="UD"
+    print(judgeCircle(moves))

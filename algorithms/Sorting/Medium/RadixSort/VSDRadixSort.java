@@ -79,6 +79,7 @@ public class VSDRadixSort {
 				for(int i=0;i<n;i++) {
 					a[i]=sc.nextInt();
 				}
+				sc.close();
 				
 			}
 			//Function to print the output
