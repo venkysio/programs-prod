@@ -57,7 +57,7 @@ def VSDthreesum(n,arr,target):
         if (i==0 or (i>0 and arr[i]!=arr[i-1])):
             low=i+1
             high=n-1
-            s=-arr[i]
+            s=target-arr[i]
             while(low<high):
                 if arr[low]+arr[high]==s:
                     ans.append([arr[i],arr[low],arr[high]])
@@ -77,6 +77,7 @@ def VSDthreesum(n,arr,target):
         print("No triplets")
 
 if __name__=="__main__":
-
-    n,arr,target=VSDUserInput()
+    n=10
+    arr=[1,2,3,4,5,6,7,8,9,10]
+    target=9
     VSDthreesum(n,arr,target)

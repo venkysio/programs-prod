@@ -5,12 +5,11 @@
 
 
 # Fuction to take user input
-def VSDuserinput():
+def getBoard(n):
     result=[]
-    n=int(input("Enter the number of queens: "))
     board=[[0 for i in range(n)] for j in range(n)]
-    return board,n,result
-result=[]
+    return board,result
+# result=[]
 
 
 # Function to print board
@@ -76,7 +75,8 @@ def VSDsolveboard(board,row,n,res):
 
 # The Driver Fuction
 if __name__=="__main__":
-    board,n,result=VSDuserinput()
+    n=4
+    board,result=getBoard(n)
     VSDsolveboard(board,0,n,result)
     print("-"*30)
     printboard(board,n)

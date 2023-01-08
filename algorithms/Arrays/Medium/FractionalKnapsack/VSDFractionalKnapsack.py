@@ -57,7 +57,10 @@ def VSDprint(sortedarray,n):
 
 # Main Function
 if __name__=="__main__":
-    n,capacity,profits,weights=VSDuserinput()
+    n=7
+    capacity=15
+    profits=[5,10,15,7,8,9,4]
+    weights=[1,3,5,4,1,3,2]
     arr=VSDcalculatepwratio(n,capacity,profits,weights)
     result=VSDknapsack(arr,n,capacity)
     VSDprint(arr,n)

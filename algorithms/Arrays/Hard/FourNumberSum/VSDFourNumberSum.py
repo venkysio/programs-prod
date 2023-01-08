@@ -1,9 +1,7 @@
-def VSDuserinput():
-    n=int(input("Enter the number of elements (>4):"))
-    arr=list(map(int,input("Enter the elements in array:").split()))
-    target=int(input("Enter the target:"))
-    arr.sort()
-    print(ksum(arr,target,4))
+# Copyrights to vsdevelopers.io
+# For more programs visit vsdevelopers.io
+# Python program to solve 3 Number Sum
+
 
 def twosum(arr,target):
     res=[]
@@ -41,4 +39,7 @@ def ksum(arr,target,k):
     return res
 
 if __name__=="__main__":
-    VSDuserinput()
+    arr=[1,2,3,4,5,6,7,8,9,10]
+    arr.sort()
+    target=10
+    print(ksum(arr,target,4))

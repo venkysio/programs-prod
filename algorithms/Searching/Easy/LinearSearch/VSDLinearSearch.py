@@ -12,7 +12,6 @@ def linear_search(array,element):
 
 
 # Test drive code
-n=int(input("Enter no of elements in array : "))
-array=[int(x) for x in input(f"Enter {n} elements in to the array: ").split()]
-element = int(input("Enter element to find in the array: "))
-linear_search(array,element)
+arr=[1,2,3,4,5,6,7,8,9,10]
+target=10
+linear_search(arr,target)
