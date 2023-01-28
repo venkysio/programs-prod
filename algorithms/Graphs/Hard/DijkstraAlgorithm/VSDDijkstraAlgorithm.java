@@ -1,102 +1,59 @@
-/*Copyrights to vsdevelopers.io*/
-/*For more programs visit vsdevelopers.io */
-/*Java program for Dijstra's Algorithm*/
-
-import java.util.LinkedList;
 
 public class VSDDijkstraAlgorithm {
-	//Class to represent the structure of the edge along with weights
-public static class VSDEdge {
-		int source;
-		int destination;
-		int weight;
-		public VSDEdge(int source, int destination, int weight) {
-			 this.source = source;
-			 this.destination = destination;
-			 this.weight =weight;
-		}
+    static final int totalVertex=9;
+    //compute the shortest distance
+    public int minimumDistance(int distance[],boolean spSpent[]){
+        int m=Integer.MAX_VALUE,m_index=-1;
+        for(int i=0;i<totalVertex;i++){
+            if(spSpent[i]==false && distance[i]<=m){
+                m=distance[i];
+                m_index=i;
+            }
+        }
+        return m_index;
+    }
+    //a unity method to display the built distance array
+    public void display(int distance[],int n){
+        System.out.println("The shortest distance from source node to all other nodes are:");
+        for(int i=0;i<n;i++){
+            System.out.println("To "+i+" the shortest distance is:"+distance[i]);
+        }
+    }
+    //dijkstra algorithm
+    public void dijkstra(int graph[][],int s){
+        int[] distance=new int[totalVertex];
+        boolean[] spSet=new boolean[totalVertex];
+        for(int i=0;i<totalVertex;i++){
+            distance[i]=Integer.MAX_VALUE;
+            spSet[i]=false;
+        }
+        //distance from the source vertex to itself is 0
+        distance[s]=0;
+        //compute the shortest path
+        for(int j=0;j<totalVertex;j++){
+            int ux=minimumDistance(distance, spSet);
+            spSet[ux]=true;
+            //updating the distance value of the neighbour vertices
+            for(int k=0;k<totalVertex;k++){
+                if(!spSet[k] && graph[j][k]!=-1 && distance[j]!=Integer.MAX_VALUE && distance[j]+graph[j][k]<distance[k]){
+                    distance[k]=distance[j]+graph[j][k];
+                }
+            }
+        }
+        display(distance, totalVertex);
+    }
+    //driver code
+    public static void main(String args[]){
+        int[][] graph=new int[][] { { -1, 3, -1, -1, -1, -1, -1, 7, -1 },  
+        { 3, -1, 7, -1, -1, -1, -1, 10, 4 },  
+        { -1, 7, -1, 6, -1, 2, -1, -1, 1 },  
+        { -1, -1, 6, -1, 8, 13, -1, -1, 3 },  
+        { -1, -1, -1, 8, -1, 9, -1, -1, -1 },  
+        { -1, -1, 2, 13, 9, -1, 4, -1, 5 },  
+        { -1, -1, -1, -1, -1, 4, -1, 2, 5 },  
+        { 7, 10, -1, -1, -1, -1, 2, -1, 6 },  
+        { -1, 4, 1, 3, -1, 5, 5, 6, -1 } };
+        VSDDijkstraAlgorithm obj=new VSDDijkstraAlgorithm();
+        obj.dijkstra(graph, 0);
+    }
 }
-//Class to represent the structure of the graph	
-public static class VSDGraph{
-	int vertices;//No.of vertices
-	LinkedList<VSDEdge> adList[];//Adjacency list to mark the edges
-	//Initializing vertices using constructor
-	VSDGraph(int size){
-		vertices=size;
-		adList=new LinkedList[vertices];
-		for(int i=0;i<vertices;i++)
-			adList[i]= new LinkedList<VSDEdge>();
-		}
-	//Function to add edge to the graph
-	public void VSDaddEgde(int source, int destination, int weight) {
-		VSDEdge edge = new VSDEdge(source, destination, weight);
-		adList[source].addLast(edge); // adding new edge to the list
-	}
-	
-	
- public  void VSDdijkstra(VSDGraph graph) {
-		   int count = graph.vertices;//no.of  vertices
-		  boolean[] visitedVertex = new boolean[count];//Array to mark the vertices alredy visited
-		   int[] distance = new int[count];
-		   for (int i = 0; i < count; i++) {
-			   visitedVertex[i] = false;
-			   distance[i] = 999999;
-		    }
-		   distance[0] = 0;//Starting vertex
-		    for (int i = 0; i < count; i++) {
-		    		int minDistance = 999999;
-		    		int u = 0;//Source vertex
-		    		//Finding next minimum distance
-		    		for (int k = 0; k <count; k++) {
-		    			if (!visitedVertex[k] && distance[k] < minDistance) {
-		    				minDistance = distance[k];
-		    				u = k;
-		    			}
-		    		}
-		    		
-		    		visitedVertex[u] = true;//marking the vertex as visited and Updating the distancesof vertices connected to it
-		    		LinkedList<VSDEdge> list = adList[u];
-		    		 for(int j=0;j<list.size();j++) {
-		    			 if ((!visitedVertex[list.get(j).destination])&& (distance[u] + list.get(j).weight<
-		    					 distance[list.get(j).destination])){
-		    				 distance[list.get(j).destination] = distance[u] + list.get(j).weight;
-		    			 }
-		    		 }
-		    	
-		    }
-		    
-		  for (int i = 0; i < distance.length; i++) {
-		      System.out.println("Distance from 0 to "+i+" is "+distance[i]);
-		    }
-
-		  }
-		
-}
-
-public static void main(String args[]) {
-	VSDGraph g=new VSDGraph(7);
-		g.VSDaddEgde(0,1,4);
-		g.VSDaddEgde(1,0,4);
-		g.VSDaddEgde(0,2,3);
-		g.VSDaddEgde(2,0,3);
-		g.VSDaddEgde(0,3,2);
-		g.VSDaddEgde(3,0,2);
-		g.VSDaddEgde(1,3,1);
-		g.VSDaddEgde(3,1,1);
-		g.VSDaddEgde(1,4,6);
-		g.VSDaddEgde(4,1,6);
-		g.VSDaddEgde(2,3,4);
-		g.VSDaddEgde(3,2,4);
-		g.VSDaddEgde(3,5,4);
-		g.VSDaddEgde(5,3,4);
-		g.VSDaddEgde(4,5,3);
-		g.VSDaddEgde(5,4,3);
-		g.VSDaddEgde(4,6,2);
-		g.VSDaddEgde(6,4,2);
-		g.VSDaddEgde(5,6,4);
-		g.VSDaddEgde(6,5,4);
-		g.VSDdijkstra(g);
-	}
-	}
-
-
