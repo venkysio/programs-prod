@@ -1,52 +1,30 @@
-/*Copyrights to vsdevelopers.io*/
-/*For more programs visit vsdevelopers.io */
-/*Java program to return any two numbers that sum up to given target*/
-import java.util.Scanner;
-public class VSDTwoNumberSum {
-	static int n;//size of array
-	static int arr[];//array of numbers
-	static int target;//target number
-	//Function to take user input
-	public static void VSDuserInput() {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter size of array:");
-		n=sc.nextInt();
-		arr=new int[n];
-		System.out.println("Enter numbers of array:");
-		for(int i=0;i<n;i++) {
-			arr[i]=sc.nextInt();
-		}
-		System.out.println("Enter target sum:");
-		target=sc.nextInt();
-	}
+//   Copyrights to venkys.io
+//   For more programs visit venkys.io 
+//   Java program for Two number sum
+
+import java.util.HashMap;
+
+public class Main {
+
 	//Function to find two numbers that sum up to the given target
-	public static void VSDsum() {
-		int[] res=new int[2];//Holds the resultant numbers
-		int j=0,i=j+1;//Initial indexes to traverse the array
-		int e=arr[j];
-		while(i<arr.length&&j<arr.length) {
-			if(arr[i]==target-e) {
-				res[0]=e;
-				res[1]=arr[i];
-				break;
-			}
-			i++;
-			if(i==arr.length) {
-				e=arr[j++];
-				i=j+1;
-				
-			}
+	static int[] twosum(int[] arr,int target){
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for(int i=0;i<arr.length;i++){
+			if(map.containsKey(arr[i])) return new int[]{map.get(arr[i]),i};
+			else map.put(target-arr[i],i);
 		}
-		System.out.println("result:");
-		for(int k:res) {
-			System.out.println(k);
-		}
+		return  new int[]{};
 	}
+
 	
 	public static void main(String args[]) {
-		VSDuserInput();
-		VSDsum();
-		
+		int[] arr={1,2,-1,4,5,6};
+		int target=0;
+        int[] result = twosum(arr, target);
+		if(result.length==2)
+			System.out.println("The two number sum elements are "+arr[result[0]]+" "+arr[result[1]]);
+		else
+			System.out.println("There are no such elements");
 		
 	}
 	

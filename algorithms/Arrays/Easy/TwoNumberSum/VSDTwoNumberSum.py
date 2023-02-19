@@ -1,10 +1,6 @@
-
-def twosum(arr,k):
-    for i in range(len(arr)):
-        for j in range(i+1,len(arr)):
-
-            if arr[i]+arr[j]==k:
-                return (i,j)
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for Two number sum
 
 def twosum_hash(arr,k):
     hash=dict()
@@ -13,9 +9,12 @@ def twosum_hash(arr,k):
             return hash[arr[i]],i
         else:
             hash[k-arr[i]]=i
-
+    return []
 if __name__=="__main__":
     arr=[1,2,-1,4,5,6]
     k=0
-    print(twosum(arr,k))
-    print(twosum_hash(arr,k))
+    result=twosum_hash(arr,k)
+    if(len(result)==2):
+        print(f"the two elements are {arr[result[0]]} {arr[result[1]]}")
+    else:
+        print("There are no such elements")

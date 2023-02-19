@@ -1,3 +1,9 @@
+
+# // Copyrights to venkys.io
+# // For more programs visit venkys.io 
+# // Python program for Palindrome
+
+
 # function return wether the input string is palindrome or not
 # It takes a string as a parameter
 def string_palindrome(string):
@@ -10,5 +16,5 @@ def string_palindrome(string):
         print(string,"is a palindrome string")
 
 #test drive code:
-string=input("Enter the string: ")
+string="level"
 string_palindrome(string)

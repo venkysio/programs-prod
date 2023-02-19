@@ -1,4 +1,6 @@
-
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for Sudoku
 from collections import Counter
 
 board=[

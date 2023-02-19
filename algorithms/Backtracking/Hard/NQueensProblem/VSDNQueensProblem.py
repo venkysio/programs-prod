@@ -1,7 +1,6 @@
-# Copyrights to vsdevelopers.io
-# For more programs visit vsdevelopers.io
-# Python program for finding Minimum spanning tree from given graph
-# using Krushkal's algorithm
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for NQeens
 
 
 # Fuction to take user input

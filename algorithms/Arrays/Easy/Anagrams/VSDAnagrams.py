@@ -1,28 +1,35 @@
-# This function returns wether the two strings are anagram or not
-# It takes two strings as a parameters
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for Anagrams
+
+
+
 def is_anagram(s1,s2):
     # we use hashtable to solve this problem
     if len(s1) != len(s2):
         print("The strings ",s1,s2,"are not anagrams")
     else:
-        ht={} # empty hash table
-        for i in range(len(s1)):
-            if s1[i] in ht.keys():
-                ht[s1[i]]+=1
+        ht=dict()
+        for i in s1:
+            if i in ht.keys():
+                ht[i]+=1
             else:
-                ht[s1[i]]=1
-            if s2[i] in ht.keys():
-                ht[s2[i]]-=1
-            else:
-                ht[s2[i]]=-1
-        for i in ht.keys():
-            if ht[i]!=0:
-                print("The strings ",s1,s2,"are not anagrams")
-                break
-        else:
-            print("The strings ",s1,s2,"are anagrams")
+                ht[i]=1
+        for j in s2:
+            if j not in ht.keys():
+                return False
+            ht[j]-=1
+        for key,value in ht.items():
+            if value!=0:
+                return False 
+        return True
+
                 
 # test drive code
-s1=input("Enter first string: ")
-s2=input("Enter secound string: ")
-is_anagram(s1,s2)
+if __name__ == "__main__":
+    s1="hello"
+    s2="olleh"
+    if(is_anagram(s1,s2)):
+        print(f"{s1} and {s2} are Anagrams")
+    else:
+        print(f"{s1} and {s2} are Not Anagrams")
