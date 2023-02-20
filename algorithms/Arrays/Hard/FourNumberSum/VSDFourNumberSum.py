@@ -1,6 +1,6 @@
-# Copyrights to vsdevelopers.io
-# For more programs visit vsdevelopers.io
-# Python program to solve 3 Number Sum
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for FourNumberSum
 
 
 def twosum(arr,target):

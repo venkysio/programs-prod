@@ -1,19 +1,10 @@
-#Copyrights to vsdevelopers.io
-#For more programs visit vsdevelopers.io 
-#Python program for knapsack problem using greedy algorithm
-
-
-# Function to take user input
-def VSDuserinput():
-    n=int(input("Enter the number of items: "))
-    m=int(input("Enter the capacity of knapsack: "))
-    p=list(map(int,input("Enter the profits of each item with space between: ").split()))
-    w=list(map(int,input("Enter the weights of each item with space between: ").split()))
-    return n,m,p,w
-
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for FractionalKnapsack
 
 
 # Function to calculate P/W ratio
+
 def VSDcalculatepwratio(n,m,p,w):
     ratioarray=[[0 for i in range(3)] for i in range(n)]
     for i in range(n):

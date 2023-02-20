@@ -1,3 +1,6 @@
+#  Copyrights to venkys.io
+#  For more programs visit venkys.io 
+#  Python program for PrefixSum
 
 def prefixSum(arr):
     for i in range(1,len(arr)):

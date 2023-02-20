@@ -1,3 +1,6 @@
+# Copyrights to venkys.io
+# For more programs visit venkys.io 
+# Python program for Searching a sorted Matrix
 
 
 def searchMatrix( matrix, target: int):
@@ -26,4 +29,7 @@ if __name__=="__main__":
               [23,30,34,60]
             ]
     target = 3
-    print(searchMatrix(matrix,target))
+    if(searchMatrix(matrix,target)):
+        print(f"{target} is found in the matrix")
+    else:
+         print(f"{target} is not found in the matrix")
