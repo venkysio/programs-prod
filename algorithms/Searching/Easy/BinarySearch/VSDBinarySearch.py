@@ -2,6 +2,7 @@
 
 
 def VSDBinarySearch(arr,k):
+    arr.sort()
     low=0
     high=len(arr)-1
     while(low<high):
