@@ -2,7 +2,7 @@
 # Function takes graph as a input parameters
 
 def BFS(graph):
-    queue=[] # Is used to implement the DFS logic
+    queue=[] # Is used to implement the BFS logic
     visted=[] # Is used to store visited vertices
     first = list(graph.keys())[0]
     queue.append(first)

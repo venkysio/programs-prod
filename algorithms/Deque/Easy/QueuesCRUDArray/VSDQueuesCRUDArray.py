@@ -1,4 +1,6 @@
-# program to implement queue
+# // Copyrights to venkys.io
+# // For more programs visit venkys.io 
+# // Python program for Queue
 class QUEUE:
 
     def __init__(self,size):

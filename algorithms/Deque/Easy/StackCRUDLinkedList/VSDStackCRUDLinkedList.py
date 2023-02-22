@@ -1,4 +1,6 @@
-
+# // Copyrights to venkys.io
+# // For more programs visit venkys.io 
+# // Java program for Stack
 class Node:
     def __init__(self,data):
         self.data=data 

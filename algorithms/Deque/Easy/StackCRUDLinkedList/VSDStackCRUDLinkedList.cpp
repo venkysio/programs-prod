@@ -1,3 +1,7 @@
+// Copyrights to venkys.io
+// For more programs visit venkys.io 
+// CPP program for Stack
+
 #include <iostream>
 using namespace std;
 
