@@ -1,3 +1,8 @@
+
+Malicious scripts are injected into otherwise benign and trusted websites through a method known as Cross-Site Scripting (XSS). 
+XSS attacks occur when an attacker uses a web application to send malicious code to a different end user in the form of a browser-side script. 
+These attacks are quite widespread and can take place anywhere a web application uses input from a user in its output without validating or encoding it first.
+
 DOM Based XSS:(TYPE 0)
 
 - It is a type of cross site scripting attack, which is mainly based on the client side scripts and browsers.
