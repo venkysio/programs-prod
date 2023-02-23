@@ -1,5 +1,5 @@
 import java.util.*;
-public class VSDBreadthFirstSearch{
+public class Main{
     private int v;
     private LinkedList<Integer> lst[];
     //create a graph

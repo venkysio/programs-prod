@@ -1,5 +1,5 @@
 import java.util.*;
-public class VSDDepthFirstSearch{
+public class Main{
     private LinkedList<Integer> lst[];
     private boolean[] visited;
     //create a graph
