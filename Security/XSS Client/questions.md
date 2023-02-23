@@ -26,3 +26,12 @@ b) Validating inputs
 c) Both of them
 Answer: c
 
+
+Select the three categories of XSS attacks:
+1. Persistent (stored)
+2. Non-persistent (reflected)
+3. DOM 
+4. Injected
+5. Buffer Overflows
+
+Answer: 1,2,3
