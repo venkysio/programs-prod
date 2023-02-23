@@ -19,20 +19,11 @@ using namespace std;
     }
 
 int main() {
-	int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-		cout<<"enter a number";
-    int n;
-    cin>>n;
-    cout<<endl;
+	int n=15;
     vector<string>v=VSD_fizz_Buzz(n);
-	for (auto i = v.begin(); i != v.end(); ++i)
-        cout << *i << " ";
-    VSD_test_count--;
+	for(auto i:v){
+        cout<<i<<" ";
     }
-	return 0;
+    cout<<endl;
 	
 }

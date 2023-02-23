@@ -26,19 +26,10 @@ int VSD_Jewels_In_Stones(string jewels,string stones)
 
 
 int main() {
-    int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-    cout<<"enter jewels string   ";
-    string jewels;
-    cin>>jewels;
-    cout<<"enter stones string   ";
-    string stones;
-    cin>>stones;
+    
+    string jewels="aA";
+    string stones="aAAbbbb";
     cout<<"jewels in stones count is: "  <<VSD_Jewels_In_Stones(jewels,stones)<<endl;
-    VSD_test_count--;
-    }
+    
     return 0;
 }
