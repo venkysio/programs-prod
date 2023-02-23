@@ -2,13 +2,12 @@
 /*For more programs visit vsdevelopers.io */
 /*Java program for sorting given numbers using bucket sort */
 import java.util.ArrayList;
-import java.util.Scanner;
-public class VSDBucketSort {
-	static int n;//size of array
-	static int arr[];//array of numbers to be sorted
+
+public class Main {
+
 	static ArrayList<Integer> temp[]=new ArrayList[10];//Array of  buckets
 	//Function to perform bucket sort
-	public static void VSDSort() {
+	public static void VSDSort(int n,int[] arr) {
 		//Creating buckets to hold certain range of numbers
 		for(int i=0;i<10;i++) {
 			temp[i]=new ArrayList<Integer>();
@@ -46,30 +45,22 @@ public class VSDBucketSort {
 			}
 		}
 	}
-	//Function to take user input
-	public static void VSDuserInput() {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter size");
-		n=sc.nextInt();
-		arr=new int[n];
-		System.out.println("Enter numbers to sort:");
-		for(int i=0;i<n;i++) {
-			arr[i]=sc.nextInt();
-		}
-	}
+
 	//Function to print output
 	public static void VSDprintOutput() {
 		System.out.println("The sorted order is:");
-		for(int i=0,j=0;i<temp.length;i++) {
+		for(int i=0;i<temp.length;i++) {
 			for(int k=0;k<temp[i].size();k++) {
-				System.out.println(temp[i].get(k));
+				System.out.print(temp[i].get(k)+" ");
 				
 			}
 		}
+		System.out.println();
 	}
 	public static void main(String args[]) {
-	VSDuserInput();//Taking user input
-	VSDSort();
+	int[] a={1, 2, 53, 12, 45, 11, 56};
+	int n=a.length;
+	VSDSort(n,a);
 	VSDprintOutput();
 	}
 }

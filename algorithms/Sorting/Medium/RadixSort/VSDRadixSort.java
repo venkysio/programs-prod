@@ -3,12 +3,11 @@
 /*Java program for Radix sort*/
 import java.util.Scanner;
 
-public class VSDRadixSort {
-	static int n;//size of array
-	static int a[];//array of numbers to be sorted
+public class Main {
+	
 	static int output[];//Sorted output array
 	//Function to sort radixes
-			public static void VSDRadix(int digits) {
+			public static void VSDRadix(int n,int[] a,int digits) {
 				int k=0;
 				int temp[]=new int[n];//Temporary array to hold radixes
 				while(k<digits) {
@@ -16,13 +15,13 @@ public class VSDRadixSort {
 						if(k>0)temp[i]=(int) ((a[i]/Math.pow(10,k))%10);
 						else temp[i]=a[i]%10;
 						}
-					VSDcountingsort(temp);
+					VSDcountingsort(n,a,temp);
 					k++;
 				}
 				
 			}
 		//Function to perform counting sort on radixes
-			public static void VSDcountingsort(int temp[]) {
+			public static void VSDcountingsort(int n,int[] a,int temp[]) {
 				int[] count=new int[10];
 				output=new int[n];
 				//Intializing all the elements of counting array to zero
@@ -60,7 +59,7 @@ public class VSDRadixSort {
 			
 		}
 	//Function to get maximum element in the array
-			public static int VSDMax() {
+			public static int VSDMax(int n,int[] a) {
 				int max=0;
 				for(int i=0;i<n;i++) {
 					if(a[i]>max) {
@@ -69,33 +68,22 @@ public class VSDRadixSort {
 				}
 				return max;
 			}
-			//Function to take user input
-			public static void VSDuserInput() {
-				Scanner sc=new Scanner(System.in);
-				System.out.println("Enter size");
-				n=sc.nextInt();
-				a=new int[n];
-				System.out.println("Enter numbers to sort:");
-				for(int i=0;i<n;i++) {
-					a[i]=sc.nextInt();
-				}
-				sc.close();
-				
-			}
+		
 			//Function to print the output
-			public static void VSDprintOutput() {
+			public static void VSDprintOutput(int n,int[] a) {
 				System.out.println("The sorted array is:");
 				for(int i=0;i<n;i++)
-					System.out.println(a[i]);
+					System.out.print(a[i]+" ");
 				
-				
+				System.out.println();
 			}
 	public static void main(String args[]) {
-		VSDuserInput();
-		int max=VSDMax();
+		int[] a={1, 2, 53, 12, 45, 11, 56};
+		int n=a.length;
+		int max=VSDMax(n,a);
 		int d=VSDdigitcount(max);
-		VSDRadix(d);
-		VSDprintOutput();
+		VSDRadix(n,a,d);
+		VSDprintOutput(n,a);
 	}
 
 }

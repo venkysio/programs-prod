@@ -4,7 +4,7 @@
 
 
 
-public class VSDQuickSort {
+public class Main {
 	
 	public static void VSDquicksort(int a[],int l,int r) {
 		if(l<r) {
