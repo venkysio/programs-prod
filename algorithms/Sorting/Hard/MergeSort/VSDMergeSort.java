@@ -1,25 +1,24 @@
 /*Copyrights to vsdevelopers.io*/
 /*For more programs visit vsdevelopers.io */
 /*Java program for Merge sort*/
-import java.util.Scanner;
 
-public class VSDMergeSort {
-	static int size;//size of array
-	static int array[];//array of numbers to be sorted
+
+public class Main {
 	
-	static void VSDmerge(int l, int r)
+	
+	static void VSDmerge(int[] array,int l, int r)
 	{
 		if(l<r) {
 			int m =l+(r-l)/2;
 			//Recursively calling merge method to divide the array
-			VSDmerge(l,m);
-			VSDmerge(m+1,r);
+			VSDmerge(array,l,m);
+			VSDmerge(array,m+1,r);
 			//Combines the divided array pieces in sorted order
-			VSDMergesort(l,m,r);
+			VSDMergesort(array,l,m,r);
 		}
 	}
 	 
-   static void VSDMergesort(int l, int m, int r){
+   static void VSDMergesort(int[] array,int l, int m, int r){
 	   //Assigning sizes for temporary arrays
 	   	int n1 = m-l+1;
         int n2 = r-m;
@@ -59,29 +58,22 @@ public class VSDMergeSort {
             j++;
             k++;
         }
-        VSDprintOutput();
+        
     }
    //Function to take user input
-public static void VSDuserInput() {
-	Scanner sc=new Scanner(System.in);
-	System.out.println("Enter size");
-	size=sc.nextInt();
-	array=new int[size];
-	System.out.println("Enter numbers to sort:");
-	for(int i=0;i<size;i++) {
-		array[i]=sc.nextInt();
-	}
-}
+
 //Function to print output
-public static void VSDprintOutput() {
+public static void VSDprintOutput(int[] array) {
 	System.out.println("The sorted order is:");
-	for(int i=0;i<size;i++) {
-		System.out.println(array[i]);
-	}
+	for(int a:array){
+        System.out.print(a+" ");
+    }
+    System.out.println();
 }
 public static void main(String args[]) {
-	VSDuserInput();//Taking user input
-	VSDmerge(0,size-1);//Calling merge for the entire array
-	VSDprintOutput();//Printing output
+	int[] array={1, 2, 53, 12, 45, 11, 56};
+    int size=array.length;
+	VSDmerge(array,0,size-1);//Calling merge for the entire array
+	VSDprintOutput(array);//Printing output
 }
 }

@@ -1,6 +1,6 @@
 
 import java.util.HashMap;
-public class VSDJewelsAndStones {
+public class Main {
 
     static void solution(String[][] testcases){
         int[] answers= new int[testcases.length];

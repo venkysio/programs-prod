@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool VSD_robote_return_origin(string moves) {
+bool VSD_robot_return_origin(string moves) {
 
     int x=0;
     int y=0;
@@ -30,16 +30,8 @@ bool VSD_robote_return_origin(string moves) {
 }
 
 int main() {
-    int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-    cout<<"enter string   ";
-    string moves;
-    cin>>moves;
-    cout<<VSD_robote_return_origin(moves)<<endl;
-    VSD_test_count--;
-    }
+   
+    string moves="UD";
+    cout<<VSD_robot_return_origin(moves)<<" ";
     return 0;
 }

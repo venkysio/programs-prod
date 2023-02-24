@@ -1,14 +1,12 @@
 
 def excelSheetColumnTitleToNumber(string):
-    d=dict()
-    for i in range(65,65+26):
-        d[chr(i)]=i-64
-    ans=0
-    j=0
-    for i in range(len(string)-1,-1,-1):
-        ans+=(d[string[i]])*26**j
-        j+=1
-    return ans
+    if(len(string)==0):
+            print("Empty String")
+            return 
+    sum=0
+    for i in range(len(string)):
+          sum = (sum*26 + ord(string[i])-64)
+    return sum
 
 
 string="AA"

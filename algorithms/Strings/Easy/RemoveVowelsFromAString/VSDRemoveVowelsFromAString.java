@@ -1,13 +1,7 @@
-import java.util.*;
 
-public class VSDRemoveVowelsFromAString {
-	//Function to take user input
-		public static String VSDuserInput() {
-			Scanner sc=new Scanner(System.in);
-			System.out.println("Enter string");
-			String s=sc.next();
-			return s;
-		}
+public class Main {
+	
+
 		//Function to remove vowels from the given String
 		public static String VSDRemoveVowels(String s) {
 			String output="";
@@ -32,7 +26,7 @@ public class VSDRemoveVowelsFromAString {
 				
 			}
 public static void main(String args[]) {
-	String s=VSDuserInput();//Taking user input
+	String s="vsdevelopers;";//Taking user input
 	String out=VSDRemoveVowels(s);
 	VSDprintOutput(out);
 }

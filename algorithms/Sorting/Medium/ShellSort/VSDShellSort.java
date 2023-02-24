@@ -2,8 +2,8 @@
 /*For more programs visit vsdevelopers.io */
 /*Java program for sorting given numbers using shell sort */
 import java.util.ArrayList;
-import java.util.Scanner;
-public class VSDShellSort {
+
+public class Main {
 	static int n;//size of array
 	static int arr[];//array of numbers to be sorted
 	//Function to perform shell sort
@@ -33,28 +33,21 @@ public class VSDShellSort {
 				shellsize=shellsize/2;
 			}
 	}
-	//Function to take user input
-	public static void VSDuserInput() {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter size");
-		n=sc.nextInt();
-		arr=new int[n];
-		System.out.println("Enter numbers to sort:");
-		for(int i=0;i<n;i++) {
-			arr[i]=sc.nextInt();
-		}
-	}
+
+	
 	//Function to print output
 	public static void VSDprintOutput() {
 		System.out.println("The sorted order is:");
 		for(int i=0;i<arr.length;i++) {
-			System.out.println(arr[i]);
+			System.out.print(arr[i]);
 				
 			}
+			System.out.println();
 		}
 
 	public static void main(String args[]) {
-	VSDuserInput();//Taking user input
+	arr=new int[]{1, 2, 53, 12, 45, 11, 56};
+	n=arr.length;
 	VSDSort();
 	VSDprintOutput();
 	}

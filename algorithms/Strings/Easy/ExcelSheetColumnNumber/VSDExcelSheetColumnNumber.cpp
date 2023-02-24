@@ -19,18 +19,8 @@ void VSD_excel_sheet_col_no(string str){
 		}
 }
 int main() {
-	int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-		cout<<"enter a string";
-    string str;
-    cin>>str;
-    cout<<endl;
+    string str="AA";
     VSD_excel_sheet_col_no(str);
-    VSD_test_count--;
-    }
 	return 0;
 	
 }

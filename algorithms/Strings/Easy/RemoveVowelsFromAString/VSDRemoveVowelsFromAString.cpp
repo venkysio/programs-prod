@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool VSD_check_vowel(char ch){
     switch(ch) {
      case 'a':
@@ -36,17 +37,9 @@ string VSD_remove_vowel(string str)
 
 
 int main() {
-    int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-    cout<<"enter string ";
-    string str;
-    cin>>str;
+    
+    string str="vsdevelopers";    
     cout<<"String after removing vovels: "<<VSD_remove_vowel(str)<<endl;
-    VSD_test_count--;
-    }
     return 0;
 }
 
