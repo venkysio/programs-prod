@@ -4,7 +4,7 @@
 import java.util.HashMap;
 
 
-public class VSDFirstUniqueCharacterInAString {
+public class Main {
     static int firstuniqchar(String s){
         HashMap<Character,Integer> hashmap=new HashMap<>();
 

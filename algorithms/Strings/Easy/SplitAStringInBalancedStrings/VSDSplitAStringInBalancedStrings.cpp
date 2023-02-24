@@ -28,18 +28,11 @@ using namespace std;
 
 
 int main() {
-    int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-    cout<<"enter string ";
-    string str;
-    cin>>str;
+   
+    string str="RLRRLLRLRL";
+
 	cout<<VSD_balance_string_split(str)<<endl;
-    
-    VSD_test_count--;
-    }
+  
     return 0;
 }
 
