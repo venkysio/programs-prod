@@ -35,3 +35,12 @@ Select the three categories of XSS attacks:
 5. Buffer Overflows
 
 Answer: 1,2,3
+
+What are the possible ways to mitigate XSS attacks:
+1. Validate user input
+2. Use escaping/encoding
+3. Set the HTTPOnly flag
+4. Sanitise HTML input
+5. All of the above
+
+Answer: 5
