@@ -1,7 +1,7 @@
 
 def multiply(num1,num2):
     res=0
-    ans=0
+    ans=""
 
     for i in range(len(num1)-1,-1,-1):
         x=int(num1[i])

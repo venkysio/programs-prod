@@ -5,11 +5,10 @@ def wordBreak(string, words):
 
     for i in range(len(string)):
         for w in words:
-
             if w == string[i-len(w)+1:i+1] and (d[i-len(w)] or i-len(w) == -1):
                 d[i]=True
             
-    print(d)
+    # print(d)
     return d[-1]
 
 if __name__=="__main__":

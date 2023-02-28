@@ -24,5 +24,5 @@ def longestPalindrome(string):
 
 
 if __name__=="__main__":
-    string="badad"
+    string="badab"
     print(longestPalindrome(string))
