@@ -10,7 +10,7 @@ class Node:
 def VSDinorder(root):
     if root:
         VSDinorder(root.left)
-        print(root.data)
+        print(root.data,end=" ")
         VSDinorder(root.right)
 
 
