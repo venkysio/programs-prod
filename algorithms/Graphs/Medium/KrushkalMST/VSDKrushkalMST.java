@@ -3,7 +3,7 @@
 //Java program for finding Minimum Spanning tree from given graph using Kruskal's algorithm
 import java.util.LinkedList;
 
-public class VSDKrushkalMST {
+public class Main {
 	//Class to represent the structure of the edge along with weights
 	public static class VSDEdge {
 		 int source;

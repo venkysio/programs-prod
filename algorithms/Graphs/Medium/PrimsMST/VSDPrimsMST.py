@@ -1,17 +1,3 @@
-# Copyrights to vsdevelopers.io
-# For more programs visit vsdevelopers.io
-# Python program for finding Minimum spanning tree from given graph
-# using prim's algorithm
-
-
-# Fuction to take user input
-def VSDuserinput():
-    n=int(input("Enter the number of nodes in graph: "))
-    print("Enter the adjacency matrix of graph with space between: ")
-    g=[list(map(int,input().split())) for i in range(n)]
-    return g,n 
-
-
 
 
 
@@ -43,5 +29,10 @@ def VSDprims(G,n):
 
 
 if __name__=="__main__":
-    g,n=VSDuserinput()
-    VSDprims(g,n)
+    g =[ [ 0, 2, 0, 6, 0 ],
+        [ 2, 0, 3, 8, 5 ],
+        [ 0, 3, 0, 0, 7 ],
+        [ 6, 8, 0, 0, 9 ],
+        [ 0, 5, 7, 9, 0 ] 
+    ]
+    VSDprims(g,5)

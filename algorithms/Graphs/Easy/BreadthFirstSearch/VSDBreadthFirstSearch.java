@@ -1,9 +1,9 @@
 import java.util.*;
-public class VSDBreadthFirstSearch{
+public class Main{
     private int v;
     private LinkedList<Integer> lst[];
     //create a graph
-    VSDBreadthFirstSearch(int ver){
+    Main(int ver){
         v=ver;
         lst=new LinkedList[v];
         for(int i=0;i<v;i++){
@@ -37,7 +37,7 @@ public class VSDBreadthFirstSearch{
     }
     //driver code
     public static void main(String args[]){
-        VSDBreadthFirstSearch obj=new VSDBreadthFirstSearch(6);
+        Main obj=new Main(6);
         obj.addEdge(0, 1);
         obj.addEdge(0, 3);
         obj.addEdge(0, 4);

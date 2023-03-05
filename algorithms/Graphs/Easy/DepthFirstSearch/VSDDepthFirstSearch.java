@@ -1,9 +1,10 @@
 import java.util.*;
-public class VSDDepthFirstSearch{
+public class Main{
+    
     private LinkedList<Integer> lst[];
     private boolean[] visited;
     //create a graph
-    VSDDepthFirstSearch(int ver){
+    Main(int ver){
         lst=new LinkedList[ver];
         visited=new boolean[ver];
         for(int i=0;i<ver;i++){
@@ -30,7 +31,7 @@ public class VSDDepthFirstSearch{
     }
     //driver code
     public static void main(String args[]){
-        VSDDepthFirstSearch obj=new VSDDepthFirstSearch(6);
+        Main obj=new Main(6);
         obj.addEdge(0, 1);
         obj.addEdge(0, 3);
         obj.addEdge(0, 4);
