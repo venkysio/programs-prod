@@ -5,9 +5,9 @@ c) Spoofing
 d) All of the above
 Answer: d
 
-Initial authentication and ongoing authentication are both required to protect data over the network 
+Initial authentication helps to prove identity, and adaptive authentication helps to prove the identity authenticity during the session.
 a) True
-b) False
+B) False
 Answer: a
 
 TCP provides checksums and acknowledges the message transfer 
