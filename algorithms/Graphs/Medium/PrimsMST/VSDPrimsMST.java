@@ -2,7 +2,7 @@
 /*For more programs visit vsdevelopers.io */
 //Java program for finding Minimum Spanning tree from given graph using Prim's algorithm
 import java.util.LinkedList;
-public class VSDPrimsMST {
+public class Main {
 	//Class to represent the structure of the edge along with weights
 	public static class VSDEdge {
 		 int source;

@@ -1,15 +1,4 @@
-# Copyrights to vsdevelopers.io
-# For more programs visit vsdevelopers.io
-# Python program for finding Minimum spanning tree from given graph
-# using Krushkal's algorithm
 
-
-# Fuction to take user input
-def VSDuserinput():
-    n=int(input("Enter the number of nodes in graph: "))
-    print("Enter the adjacency matrix of graph with space between: ")
-    g=[list(map(int,input().split())) for i in range(n)]
-    return g,n
 
 
 # Function to convert adjacency matrix to adjacency list
@@ -52,7 +41,7 @@ def VSDkruskal(graph,n):
         parent = []
         rank = []
         for node in range(n):
-            parent.append(node)
+            parent.append(node)    
             rank.append(0)
         while e < n - 1:
             u, v, w = graph[i]
@@ -74,6 +63,12 @@ def VSDkruskal(graph,n):
 
 # The Driver Function
 if __name__=="__main__":
-    g,n=VSDuserinput()
+    n=5
+    g =[ [ 0, 2, 0, 6, 0 ],
+        [ 2, 0, 3, 8, 5 ],
+        [ 0, 3, 0, 0, 7 ],
+        [ 6, 8, 0, 0, 9 ],
+        [ 0, 5, 7, 9, 0 ] 
+    ]   
     x=graph(g)
     VSDkruskal(x,n)

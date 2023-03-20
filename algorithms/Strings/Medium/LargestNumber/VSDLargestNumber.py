@@ -3,8 +3,7 @@
 import functools as f 
 
 
-def compare(x,y):
-   
+def compare(x,y):   
     return (x<y)-(x>y)
 
 

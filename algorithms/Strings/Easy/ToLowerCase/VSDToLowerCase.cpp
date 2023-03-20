@@ -21,17 +21,8 @@ using namespace std;
 
 
 int main() {
-    int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-    cout<<"enter string ";
-    string str;
-    cin>>str;
-	cout<<VSD_to_lower_case(str)<<endl;
     
-    VSD_test_count--;
-    }
+    string str="UpperCase";   
+	cout<<VSD_to_lower_case(str)<<endl;  
     return 0;
 }

@@ -19,7 +19,7 @@ bool VSD_Valid_Parentheses(string str){
 						return false;
 					}
 					else{
-						if(str[i] == stack_VSD.top()){
+						if(str[i] == VSD[stack_VSD.top()]){
 							stack_VSD.pop();
 						}
 						else{
@@ -41,18 +41,10 @@ bool VSD_Valid_Parentheses(string str){
 
 }
 int main() {
-	int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-		cout<<"enter a string";
-    string str;
-    cin>>str;
-    cout<<endl;
-    cout<<VSD_Valid_Parentheses(str);
-    VSD_test_count--;
-    }
+	
+    string str="()[]{}";
+    if(VSD_Valid_Parentheses(str)) cout<<"It is valid Parantheses";
+    else cout<<"It is not valid Parantheses";
 	return 0;
 	
 }

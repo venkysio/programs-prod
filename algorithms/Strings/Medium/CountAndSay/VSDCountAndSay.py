@@ -1,8 +1,4 @@
 
-
-
-
-
 def util(string):
     res=""
     string+="#"

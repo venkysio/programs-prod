@@ -11,7 +11,7 @@ def uniqueMorseRepresentations(words:list[str])->int:
     lst=set()
     for word in words:
         answer=""
-        for char in i:
+        for char in word:
             answer+=morsedict[char]
         lst.add(answer)
     return len(lst)    

@@ -91,9 +91,9 @@ class VSDbalancedtree:
         if root is None:
             return root
         root.height=1+max(self.getheight(root.left),self.getheight(root.right))
-        balance=self.getbalace(root)
+        balance=self.getbalance(root)
         if balance>1:
-            if self.getbalace(root.left)>=0:
+            if self.getbalance(root.left)>=0:
                 return self.rightrotate(root)
             else:
                 root.left=self.leftrotate(root.left)

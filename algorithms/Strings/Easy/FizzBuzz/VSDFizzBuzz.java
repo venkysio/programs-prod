@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
-public class test {
+
+public class Main {
+
 
 	static ArrayList<String> fizzBuzz(int n) {
 		ArrayList<String> arr = new ArrayList<>();

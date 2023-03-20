@@ -1,13 +1,3 @@
-.
-
-# Recursive approach
-# def isPalindrome(string,low,high):
-#     if low>=high:
-#         return True 
-#     if string[low]!=string[high]:
-#         return False
-    
-#     return isPalindrome(string,low+1,high-1)
 
 def ispalindrome(string):
     

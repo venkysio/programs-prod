@@ -48,7 +48,7 @@ def deleteBST(root,data):
 def inorder(root):
     if root:
         inorder(root.left)
-        print(root.data)
+        print(root.data,end=" ")
         inorder(root.right)
     
 
@@ -61,4 +61,5 @@ if __name__=="__main__":
     
     inorder(root)
     root=deleteBST(root,20)
+    print()
     inorder(root)

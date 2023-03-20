@@ -1,39 +1,25 @@
+#include<bits/stdc++.h>
 
-#include <iostream>
 using namespace std;
 
-
-void VSDcheck_palindrome(string str){
-    int len=str.length();
-    int ptr=1;
-    for(int i=0;i<len;i++){
-        if(str[i]!=str[len-i-1]){
-            ptr=0;
-            break;
-        }
+bool isPalindrome(string s){
+    string rev="";
+    for(char ch:s){
+        if(ch>=97 && ch<=122)
+            rev+=ch;
+        else if(ch>=65 && ch<=90)
+            rev+=ch+32;
     }
-    if(ptr){
-        cout<<str<<" is a palindrome";
-        
+    int i=0,j=rev.length()-1;
+    while(i<j){
+        if(rev[i++]!=rev[j--]) return false;
     }
-    else{
-        cout<<str<<" is not a palindrome";
-    }
-
+    return true;
 }
-int main() {
-	int VSD_test_count;
-    cout<<"enter no of test case count ";
-    cin>>VSD_test_count;
-    while(VSD_test_count)
-    {
-		cout<<"enter a string to check palindrome ";
-    string str;
-    cin>>str;
-    cout<<endl;
-    VSDcheck_palindrome(str);
-    VSD_test_count--;
-    }
-	return 0;
-	
+
+int main(){
+    string s="A man, a plan, a canal: Panama";
+    if(isPalindrome(s))cout<<"It is a palindrome";
+    else cout<<"It is not a palindrome";
+    return 0;
 }
