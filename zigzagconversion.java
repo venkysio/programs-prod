@@ -53,5 +53,8 @@ class ZigzagConversion {
         // Convert the input string to a zigzag pattern then print the result
         String result = convert(s, numRows);
         System.out.println(result);
+        
+        //Sample output
+        // Ennierge
     }
 }
