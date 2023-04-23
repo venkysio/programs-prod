@@ -1,6 +1,10 @@
+//copyrights to venkys.io
+//For more prgrams, visit venkys.io
+//This program demonstrates the doubly linked list 
 
 #include<bits/stdc++.h>
-using namespace std;
+
+//Node class, consisting, two pointers, pointing to left node and right node, and the data 
 class Node{
     public:
         int data;
@@ -18,6 +22,7 @@ class Node{
             prev=NULL;
         }
 };
+
 
 class DoubleLinkedList{
     private:
@@ -53,17 +58,18 @@ class DoubleLinkedList{
         void print(){
             Node* temp = head;
             while(temp != NULL){
-                cout<<temp->data<<" ";
+                std::cout<<temp->data<<" ";
                 temp=temp->next;
             }
-            cout<<endl;
+            std::cout<<endl;
         }
 
         void size(){
-            cout<<length<<endl;
+            std::cout<<length<<endl;
         }
 };
 
+//main function responsible fro creating the doubly linked list, inserting two elemement, print, delete, and insert back.
 int main(){
     DoubleLinkedList s;
     s.insert(10);
