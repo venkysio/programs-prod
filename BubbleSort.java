@@ -1,6 +1,7 @@
-/*Copyrights to vsdevelopers.io*/
-/*For more programs visit vsdevelopers.io */
-/*Java program for Bubble sort*/
+/*Copyrights to venkys.io
+For more programs visit venkys.io 
+Java program demonstrating the Bubble Sort*/
+
 public class BubbleSort {
 	static int a[]={1,6,3,47,23,72,56};//array of numbers to be sorted
 	static int n=a.length;//size of array
