@@ -70,10 +70,10 @@ int main()
     vector<int> v{1,0,-1,0,-2,2};
     int target=0;
     std::vector<std::vector<int>> sum=fourSum(v,target);
-    std::cout<<"The unique quadruplets are"<<endl;
+    std::cout<<"The unique quadruplets are"<<std::endl;
     for (int i = 0; i < sum.size(); i++) {
         for (int j = 0; j < sum[i].size(); j++)
             std::cout << sum[i][j] << " ";
-        std::cout << endl;
+        std::cout << std::endl;
     }
 }
