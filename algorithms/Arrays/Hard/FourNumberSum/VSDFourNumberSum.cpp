@@ -5,8 +5,7 @@
 
 
 #include<bits/stdc++.h>
-using namespace std;
-
+    
     vector<vector<int>> fourSum(vector<int>& num, int target) {
          vector<vector<int> > res;
         
@@ -70,11 +69,11 @@ int main()
 
     vector<int> v{1,0,-1,0,-2,2};
     int target=0;
-    vector<vector<int>> sum=fourSum(v,target);
-    cout<<"The unique quadruplets are"<<endl;
+    std::vector<std::vector<int>> sum=fourSum(v,target);
+    std::cout<<"The unique quadruplets are"<<endl;
     for (int i = 0; i < sum.size(); i++) {
         for (int j = 0; j < sum[i].size(); j++)
-            cout << sum[i][j] << " ";
-        cout << endl;
+            std::cout << sum[i][j] << " ";
+        std::cout << endl;
     }
 }
